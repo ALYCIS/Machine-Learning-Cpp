@@ -86,10 +86,7 @@ void RegressionBivariee::File_create(const std::string & file_name, int m,int se
   std::ofstream File = std::ofstream();
   File.open(file_name);
 
-  
-
-  
-  
+  if(!File.is_open()) {std::cerr<<"Erreur d'ouverture de fichier"<<std::endl; exit(EXIT_FAILURE);}
   
 }
 
