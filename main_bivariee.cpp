@@ -12,7 +12,7 @@
 
 
 int m = 1e+3;
-const int n = 2;
+const int n = 2; // n est fixé à 2
 #define num_threads 8
 //#define OMP
 
