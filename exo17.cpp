@@ -15,7 +15,7 @@ public:
   {
 
     string file_name = "universe-formula";
-    string first_path {"/home/cisse/Bureau/CUDA"};
+    string first_path {"/tmp/documents"};
 
     string absolute_path = first_path + "/" + file_name;
 
@@ -23,12 +23,12 @@ public:
 
     std::filesystem::path fichier(absolute_path);
 
-     cout<<"Repertoire premier : "<< fichier.string() << std::endl;
+    //cout<<"Repertoire premier : "<< fichier.string() << std::endl;
 
     if(std::filesystem::exists(fichier))
       {
         formulaPath = absolute_path;
-        cout<<" Le chemin est : "<<formulaPath<<endl;
+        //cout<<" Le chemin est : "<<formulaPath<<endl;
         return true;
       }
 
@@ -51,8 +51,8 @@ public:
                 // std::filesystem::directory_entry dossier_fichier(first_path);
                 formulaPath = absolute_path;
             
-                cout<<"Le fichier existe ? = "<< test << endl;
-                cout<<" Le chemin est : "<<formulaPath<<endl;
+                // cout<<"Le fichier existe ? = "<< test << endl;
+                // cout<<" Le chemin est : "<<formulaPath<<endl;
                 return true;
               }
           }
@@ -72,7 +72,7 @@ int main()
 
   cout<< "In this example, the formula path is :" <<endl;
   cout<< FORMULA_PATH << endl;
-  cout << "and you found it at :" <<found<<endl;
+  cout << "and you found it at :"<<endl;
   cout << pathResult << endl;
 
   return 0;
