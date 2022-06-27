@@ -3,3 +3,4 @@ tmp/todo.txt
 *.txt
 *.org
 ressources_cours_git/*
+*.tar
