@@ -58,7 +58,7 @@ public:
         somme_valeur2 += (65<= caractere2 && caractere2 <= 90)? (  int(caractere2 + 32) ): ( int (caractere2));
       }
 
-    cout<<"somme1 =" << somme_valeur1<<" somme2 = "<<somme_valeur2<<endl;
+    // cout<<"somme1 =" << somme_valeur1<<" somme2 = "<<somme_valeur2<<endl;
     if(somme_valeur1 != somme_valeur2) return false;
 
     return true; 
