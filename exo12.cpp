@@ -3,6 +3,8 @@
 
 using namespace std;
 
+
+
 class Answer
 {
 public:
@@ -41,7 +43,7 @@ public:
         char caractere2 = b[i];
         auto cherche2 = a.find(caractere2);
 
-        if(cherche2 == string::npos) // On a pas retrouvé la lettre
+        if(cherche2 == string::npos) // On a pas retrouvé la lettre  
           {
             // on converti le caractere
             if(65<= caractere2 && caractere2 <= 90) caractere2 = caractere2 + 32; // miniscule
@@ -59,9 +61,9 @@ public:
     cout<<"somme1 =" << somme_valeur1<<" somme2 = "<<somme_valeur2<<endl;
     if(somme_valeur1 != somme_valeur2) return false;
 
-    return true;
+    return true; 
   }
-
+ 
 };
 //kakouj     joujak
 
@@ -69,7 +71,7 @@ public:
 int main(){
 
   cout<< boolalpha << Answer::isTwin("Hello", "world") << endl; // false
-  cout<< boolalpha << Answer::isTwin("aaaa", "bcda") << endl; // true
+  cout<< boolalpha << Answer::isTwin("aaba", "bcda") << endl; // true
   cout<< boolalpha << Answer::isTwin("Lookout", "Outlook") << endl; // true
   cout<< boolalpha << Answer::isTwin("kakouj", "AkoJJu") << endl; // false
 
