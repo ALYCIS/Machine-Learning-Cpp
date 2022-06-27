@@ -12,7 +12,7 @@ public:
     int n = a.size();
     int m = b.size();
 
-    cout<<" a = "<<a<<" b= "<<b<<endl;
+    // cout<<" a = "<<a<<" b= "<<b<<endl;
 
     if(n != m) return false;
 

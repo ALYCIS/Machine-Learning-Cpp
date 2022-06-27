@@ -1,3 +1,7 @@
+public:
+  static bool locateUniverseFormula(string & formulaPath)
+  {
+
 #include <string>
 #include <iostream>
 #include <cstring>
@@ -10,10 +14,6 @@ using namespace std;
 
 class Answer
 {
-public:
-  static bool locateUniverseFormula(string & formulaPath)
-  {
-
     string file_name = "universe-formula";
     string first_path {"/tmp/documents"};
 
