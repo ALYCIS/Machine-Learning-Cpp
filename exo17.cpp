@@ -19,25 +19,17 @@ class Answer
 
     string absolute_path = first_path + "/" + file_name;
 
-    
-
     std::filesystem::path fichier(absolute_path);
-
-    //cout<<"Repertoire premier : "<< fichier.string() << std::endl;
 
     if(std::filesystem::exists(fichier))
       {
         formulaPath = absolute_path;
-        //cout<<" Le chemin est : "<<formulaPath<<endl;
         return true;
       }
 
     for(auto const & f : std::filesystem::recursive_directory_iterator(first_path,std::filesystem::directory_options::follow_directory_symlink))
       {
         const std::string s = f.path();
-
-        //cout<<"Repertoire : "<< s << std::endl;
-
         if( f.is_directory() )
           {
             absolute_path = f.path().string()+"/"+file_name;
@@ -47,12 +39,7 @@ class Answer
 
             if(test)
               {
-                // //cout<<file_name<<endl;
-                // std::filesystem::directory_entry dossier_fichier(first_path);
                 formulaPath = absolute_path;
-            
-                // cout<<"Le fichier existe ? = "<< test << endl;
-                // cout<<" Le chemin est : "<<formulaPath<<endl;
                 return true;
               }
           }
